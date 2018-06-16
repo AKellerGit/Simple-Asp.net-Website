@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+    {
+
+    }
+</script>
+
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style ="width: 1080px;margin: 0 auto">
+        <tr style ="width:1080px;height:45px">
+            <td style ="width:60px">
+                <img src="images/logo.jpg" style="height: 40px; width: 60px" />
+            </td>
+            <td style ="width:120px">
+                Andrew Keller
+            </td>
+            <td style ="width:880px;text-align:right">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/images/facebook.png" Width="30px" />&nbsp;&nbsp;
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="30px" ImageUrl="~/images/googleplus.jpg" Width="30px" />&nbsp;&nbsp;
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="30px" ImageUrl="~/images/twitter.jpg" Width="30px" />
+            </td>
+        </tr>
+        <tr style ="width:1080px;height:40px;background-color:#2dffcc">
+            <td colspan ="3">
+                <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact" Value="Contact"></asp:MenuItem>
+                        <asp:MenuItem Text="Github" Value="Github"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle ForeColor="#000066" />
+                    <StaticMenuItemStyle ForeColor="Black" HorizontalPadding="50px" />
+                    <StaticSelectedStyle Font-Size="Large" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr style="width:1080px;">
+            <td colspan="3" class="auto-style1">
+                <img src="/images/crystal.jpg" style="height: 550px; width: 1080px" />
+            </td>
+        </tr>
+        <tr style ="width:1080px">
+            <td colspan ="3">
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </td>
+        </tr>
+        <tr style ="width:1080px;height:20px;background-color:black;text-align:center;color:white">
+            <td colspan ="3">
+                Andrew Keller
+            </td>
+        </tr>
+    </table>   
+    </form>
+</body>
+</html>
