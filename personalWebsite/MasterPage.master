@@ -5,7 +5,7 @@
 
     protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
     {
-
+        
     }
 </script>
 
@@ -41,10 +41,10 @@
             <td colspan ="3">
                 <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
-                        <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
-                        <asp:MenuItem Text="Contact" Value="Contact"></asp:MenuItem>
-                        <asp:MenuItem Text="Github" Value="Github"></asp:MenuItem>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl ="~/Index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About" NavigateUrl ="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact" Value="Contact" NavigateUrl ="~/Contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Github" Value="Github" NavigateUrl = "https://github.com/AKellerGit"></asp:MenuItem>
                     </Items>
                     <StaticHoverStyle ForeColor="#000066" />
                     <StaticMenuItemStyle ForeColor="Black" HorizontalPadding="50px" />
